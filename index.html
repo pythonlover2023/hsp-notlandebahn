@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actio! – Das Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body{font-family:Arial;background:#111;color:#fff;margin:0;padding:0}
+        .hero{background:linear-gradient(135deg,#4facfe,#00f2fe);padding:60px 20px;text-align:center}
+        h1{font-size:3em;margin:0}
+        .danksagung{background:#222;padding:30px;margin:20px;border-left:5px solid #00f2fe}
+        .share-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px}
+        .share-btn{background:#333;padding:12px 20px;border-radius:8px;text-decoration:none;color:#fff}
+        .btn{background:#00f2fe;color:#000;padding:15px 30px;border-radius:50px;text-decoration:none;display:inline-block;margin:20px}
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>actio!</h1>
+        <p>Wo HSP-Narben zu Sternen werden</p>
+        <p>10 Tracks · Songtexte · Community · Share the scar</p>
+        <a href="https://suno.com/playlist/DEIN_ALBUM_LINK" target="_blank" class="btn">Zum Album auf Suno</a>
+    </div>
+
+    <div class="danksagung">
+        <h2>Danke ans Proton: Miranda Luby</h2>
+        <p>Deine Guardian-Story war der Funke. Du hast gezeigt: Sensibilität ist Fluch und Segen – und darf kein Käfig sein. Dein Actio hat mein Reactio geboren. Jetzt bist DU dran.</p>
+        <p><strong>Du bist der nächste Stern.</strong></p>
+    </div>
+
+    <div style="text-align:center">
+        <h2>Teile den Funken</h2>
+        <p>"Entdecke actio! – HSP-Stories, die zu Sternen werden. Proton trifft DNA – und du bist der nächste Funke! https://pythonlover2023.github.io/actio-portal"</p>
+        <div class="share-buttons" id="share-buttons"></div>
+    </div>
+
+    <script>
+        const url = encodeURIComponent(location.href);
+        const text = encodeURIComponent("Entdecke actio! – HSP-Stories, die zu Sternen werden. Proton trifft DNA – und du bist der nächste Funke!");
+        const btns = [
+            {name:"WhatsApp",icon:"fab fa-whatsapp",link:`https://wa.me/?text=\( {text}%20 \){url}`},
+            {name:"Telegram",icon:"fab fa-telegram",link:`https://t.me/share/url?url=\( {url}&text= \){text}`},
+            {name:"X / Twitter",icon:"fab fa-twitter",link:`https://twitter.com/intent/tweet?text=\( {text}&url= \){url}`},
+            {name:"Facebook",icon:"fab fa-facebook",link:`https://www.facebook.com/sharer/sharer.php?u=${url}`},
+            {name:"Instagram",icon:"fab fa-instagram",link:`https://www.instagram.com/`} // Web-Intent reicht für Copy-Paste
+        ];
+        document.getElementById("share-buttons").innerHTML = btns.map(b=>`<a href="\( {b.link}" target="_blank" class="share-btn"><i class=" \){b.icon}"></i> ${b.name}</a>`).join("");
+    </script>
+</body>
+</html>
