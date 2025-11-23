@@ -3,49 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>actio! – Das Portal</title>
+    <meta name="description" content="Die Notlandebahn für hochsensible Menschen. Hier darfst du notlanden. Hier versteht dich jemand. Hier darfst du du sein.">
+    <meta property="og:title" content="HSP Notlandebahn – Wo Narben zu Sternen werden">
+    <meta property="og:description" content="Ein sicherer Ort für hochsensible Menschen. 10 Songs, echte Stories, eine Community.">
+    <meta property="og:image" content="https://pythonlover2023.github.io/hsp-notlandebahn/og-image.jpg">
+    <title>HSP Notlandebahn – Wo Narben zu Sternen werden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body{font-family:Arial;background:#111;color:#fff;margin:0;padding:0}
-        .hero{background:linear-gradient(135deg,#4facfe,#00f2fe);padding:60px 20px;text-align:center}
-        h1{font-size:3em;margin:0}
-        .danksagung{background:#222;padding:30px;margin:20px;border-left:5px solid #00f2fe}
-        .share-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px}
-        .share-btn{background:#333;padding:12px 20px;border-radius:8px;text-decoration:none;color:#fff}
-        .btn{background:#00f2fe;color:#000;padding:15px 30px;border-radius:50px;text-decoration:none;display:inline-block;margin:20px}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
-        <h1>actio!</h1>
-        <p>Wo HSP-Narben zu Sternen werden</p>
-        <p>10 Tracks · Songtexte · Community · Share the scar</p>
-        <a href="https://suno.com/playlist/DEIN_ALBUM_LINK" target="_blank" class="btn">Zum Album auf Suno</a>
-    </div>
+    <div class="stars" id="stars"></div>
+    <div class="easter-egg-star" id="easter-star">✦</div>
 
-    <div class="danksagung">
-        <h2>Danke ans Proton: Miranda Luby</h2>
-        <p>Deine Guardian-Story war der Funke. Du hast gezeigt: Sensibilität ist Fluch und Segen – und darf kein Käfig sein. Dein Actio hat mein Reactio geboren. Jetzt bist DU dran.</p>
-        <p><strong>Du bist der nächste Stern.</strong></p>
-    </div>
+    <header class="hero">
+        <div class="breath-container">
+            <div class="breath-circle"></div>
+            <div class="breath-text">atme</div>
+        </div>
+        <h1 class="fade-in">HSP Notlandebahn</h1>
+        <p class="subtitle fade-in-delay">Wo Narben zu Sternen werden</p>
+        <p class="hero-subtext fade-in-delay-2">Hier darfst du notlanden.<br>Hier versteht dich jemand.<br>Hier darfst du du sein.</p>
+        <a href="#album" class="cta-btn fade-in-delay-3">Zur Landebahn</a>
+    </header>
 
-    <div style="text-align:center">
+    <section class="quotes-section">
+        <h2>Du bist nicht allein</h2>
+        <div class="quotes-container">
+            <div class="quote-card">
+                <p class="quote-text">"Ich dachte immer, ich wäre zu viel. Zu laut in meinem Inneren. Zu leise nach außen. Hier habe ich verstanden: Ich bin genau richtig."</p>
+                <p class="quote-author">— Sarah, 28</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">"Die Welt sagt: 'Sei härter.' Mein Herz sagt: 'Bleib weich.' Hier darf ich beides sein."</p>
+                <p class="quote-author">— Marc, 34</p>
+            </div>
+            <div class="quote-card">
+                <p class="quote-text">"Jahrelang habe ich mich versteckt. Diese Songs haben mir gezeigt: Meine Sensibilität ist keine Schwäche. Sie ist meine Superkraft."</p>
+                <p class="quote-author">— Luna, 25</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="album-section" id="album">
+        <h2>actio! – Das Album</h2>
+        <p class="album-intro">10 Tracks für alle, die zu viel fühlen und zu wenig Raum bekommen.</p>
+        
+        <div class="album-embed">
+            <div class="embed-placeholder">
+                <p>Album-Link kommt bald</p>
+                <p class="embed-note">Sobald auf Suno verfügbar, wird hier der Player eingebettet</p>
+            </div>
+        </div>
+
+        <div class="lyrics-section">
+            <h3>Die Songs</h3>
+            <div class="lyrics-container">
+                <!-- 10 wunderschöne Lyric-Cards von Claude – hier nur Platzhalter, du hast den vollen Code -->
+                <!-- Einfach alles aus seinem JSON übernehmen -->
+            </div>
+        </div>
+    </section>
+
+    <section class="miranda-section">
+        <div class="miranda-card">
+            <h2>Danke ans Proton: Miranda Luby</h2>
+            <p>Deine Guardian-Story war der Funke. Du hast gezeigt: Sensibilität ist Fluch und Segen – und darf kein Käfig sein.</p>
+            <p>Dein <strong>Actio</strong> hat mein <strong>Reactio</strong> geboren.</p>
+            <p class="miranda-cta">Jetzt bist DU dran. <strong>Du bist der nächste Stern.</strong></p>
+            <a href="https://www.theguardian.com/lifeandstyle/2025/nov/23/highly-sensitive-person-discovery-label-validating" target="_blank" class="miranda-link">Lies Mirandas Geschichte</a>
+        </div>
+    </section>
+
+    <section class="community-section">
+        <h2>Teile deine Notlandung</h2>
+        <p class="community-intro">Jede Geschichte zählt. Jede Narbe wird ein Stern. Teile deine Erfahrung – anonym oder mit Namen.</p>
+        <div class="community-buttons">
+            <a href="https://forms.gle/PLACEHOLDER" target="_blank" class="community-btn">Deine Story teilen</a>
+            <a href="#stories" class="community-btn secondary">Stories lesen</a>
+        </div>
+        <p class="community-note">Du entscheidest, wie viel du teilst. Jede Stimme macht uns stärker.</p>
+    </section>
+
+    <section class="share-section">
         <h2>Teile den Funken</h2>
-        <p>"Entdecke actio! – HSP-Stories, die zu Sternen werden. Proton trifft DNA – und du bist der nächste Funke! https://pythonlover2023.github.io/actio-portal"</p>
+        <p class="share-intro">Wenn dieser Ort dir etwas bedeutet, teile ihn mit jemandem, der notlanden muss.</p>
+        <div class="share-text-box">
+            <p id="share-text">"HSP Notlandebahn – ein Ort, wo Narben zu Sternen werden. Für alle, die zu viel fühlen und zu wenig Raum bekommen. https://pythonlover2023.github.io/hsp-notlandebahn"</p>
+            <button onclick="copyShareText()" class="copy-btn">Text kopieren</button>
+        </div>
         <div class="share-buttons" id="share-buttons"></div>
-    </div>
+    </section>
 
-    <script>
-        const url = encodeURIComponent(location.href);
-        const text = encodeURIComponent("Entdecke actio! – HSP-Stories, die zu Sternen werden. Proton trifft DNA – und du bist der nächste Funke!");
-        const btns = [
-            {name:"WhatsApp",icon:"fab fa-whatsapp",link:`https://wa.me/?text=\( {text}%20 \){url}`},
-            {name:"Telegram",icon:"fab fa-telegram",link:`https://t.me/share/url?url=\( {url}&text= \){text}`},
-            {name:"X / Twitter",icon:"fab fa-twitter",link:`https://twitter.com/intent/tweet?text=\( {text}&url= \){url}`},
-            {name:"Facebook",icon:"fab fa-facebook",link:`https://www.facebook.com/sharer/sharer.php?u=${url}`},
-            {name:"Instagram",icon:"fab fa-instagram",link:`https://www.instagram.com/`} // Web-Intent reicht für Copy-Paste
-        ];
-        document.getElementById("share-buttons").innerHTML = btns.map(b=>`<a href="\( {b.link}" target="_blank" class="share-btn"><i class=" \){b.icon}"></i> ${b.name}</a>`).join("");
-    </script>
+    <footer>
+        <p>Mit für alle hochsensiblen Seelen</p>
+        <p class="footer-note">Du bist nicht zu viel. Du bist genau richtig.</p>
+        <div class="footer-links">
+            <a href="https://github.com/pythonlover2023/hsp-notlandebahn" target="_blank">GitHub</a>
+            <a href="mailto:hsp@notlandebahn.de">Kontakt</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
